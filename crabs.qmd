@@ -41,4 +41,4 @@ pie_crab %>%
 
 
 # Citations
-Allison Horst, Julien Brun 
+Allison Horst, Julien Brun https://lter.github.io/lterdatasampler/index.html
