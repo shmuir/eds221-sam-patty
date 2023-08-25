@@ -4,7 +4,17 @@ format: html
 editor: visual
 ---
 
+
+
 ```{r}
 library(lterdatasampler)
+library(tidyverse)
+```
+
+plot of fiddler crab carapace widths observed at the different latitudes
+
+```{r}
+ggplot(data = pie_crab, aes(x = latitude, y = size)) + 
+  geom_point()
 ```
 
