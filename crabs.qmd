@@ -2,6 +2,9 @@
 title: "crabs"
 format: html
 editor: visual
+execute: 
+  warning: false
+  echo: false
 ---
 
 
@@ -14,7 +17,19 @@ library(tidyverse)
 plot of fiddler crab carapace widths observed at the different latitudes
 
 ```{r}
-ggplot(data = pie_crab, aes(x = latitude, y = size)) + 
-  geom_point()
+#| fig-cap: "Crab carapace width based on latitude and water temperature"
+#| 
+ggplot(data = pie_crab, aes(x = latitude, y = size, color = water_temp)) + 
+  geom_jitter() +
+  theme_linedraw() +
+  labs(y = "carapace width (cm)", color = "Water temp. (ºC)")
+```
+
+summary table containing the mean, standard deviation, and sample size of fiddler crab carapace widths by site (tip: use round(mean(), 2) to round a value to 2 decimal places)
+
+```{r}
+pie_crab %>%
+  group_by(site) %>%
+  summarise(mean_size = mean(size), sd_size = sd(size), count = n())
 ```
 
