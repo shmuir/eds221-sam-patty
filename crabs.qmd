@@ -14,7 +14,11 @@ library(lterdatasampler)
 library(tidyverse)
 ```
 
-plot of fiddler crab carapace widths observed at the different latitudes
+## Fiddler Crabs
+
+The latitide and water temperature can have an effect on Fiddler Crab sizes.
+
+Here is a plot of fiddler crab carapace widths observed at the different latitudes.
 
 ```{r}
 #| fig-cap: "Crab carapace width based on latitude and water temperature"
@@ -25,7 +29,7 @@ ggplot(data = pie_crab, aes(x = latitude, y = size, color = water_temp)) +
   labs(y = "carapace width (cm)", color = "Water temp. (ºC)")
 ```
 
-summary table containing the mean, standard deviation, and sample size of fiddler crab carapace widths by site (tip: use round(mean(), 2) to round a value to 2 decimal places)
+Here is a summary table containing the mean, standard deviation, and sample size of fiddler crab carapace widths by site. 
 
 ```{r}
 pie_crab %>%
