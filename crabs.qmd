@@ -30,6 +30,8 @@ summary table containing the mean, standard deviation, and sample size of fiddle
 ```{r}
 pie_crab %>%
   group_by(site) %>%
-  summarise(mean_size = mean(size), sd_size = sd(size), count = n())
+  summarise(`Mean Size` = mean(size), 
+            `SD Size` = sd(size), 
+            Count = n()) 
 ```
 
